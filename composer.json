@@ -57,7 +57,7 @@
   	  "php artisan elfinder:publish"
   	],
   	"post-root-package-install": [
-  	  "php -r \"copy('.env.example', '.env');\""
+  	  "php -r \"copy('.env', '.env');\""
   	],
   	"post-create-project-cmd": [
   	  "php artisan key:generate"
