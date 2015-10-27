@@ -17,8 +17,8 @@ class CreateCarouselsTable extends Migration
             $table->unsignedInteger('language_id');
             $table->foreign('language_id')->references('id')->on('languages');
             $table->string('title');
-            $table->string('slug')->unique();
-            $table->text('content');
+            $table->string('image');
+            $table->text('description');
             $table->timestamps();
         });
     }
