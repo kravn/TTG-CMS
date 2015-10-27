@@ -24,6 +24,8 @@ class CreatePagesTable extends Migration
             $table->string('slug')->unique();
             $table->text('content');
             $table->string('description');
+            $table->boolean('is_navigation')->nullable();
+            $table->boolean('is_footer')->nullable();
             $table->timestamps();
         });
 	}
