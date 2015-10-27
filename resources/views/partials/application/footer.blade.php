@@ -1,4 +1,3 @@
-@include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
 
 <script>
     @if(!empty(Config::get('settings')->analytics_id))

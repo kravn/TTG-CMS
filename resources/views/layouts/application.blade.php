@@ -24,12 +24,15 @@
     <script src="{{ url( 'js/application-custom.js' ) }}" type="text/javascript"></script>
 </head>
 <body>
-@include('partials.application.top')
-<div class="container">
-    <main class="content">
-        @yield('content')
-    </main>
-</div>
-@include('partials.application.footer')
+    <div class="section--header">
+        @include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
+    </div>
+    @include('partials.application.top')
+    <div class="container">
+        <main class="content">
+            @yield('content')
+        </main>
+    </div>
+    @include('partials.application.footer')
 </body>
 </html>
