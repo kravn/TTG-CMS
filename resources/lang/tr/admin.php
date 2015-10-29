@@ -13,6 +13,12 @@ return [
         "index"                     => "Makaleler",
         "show"                      => "Makale göster"
     ],
+    "carousel" => [
+        "create"                    => "Create carousel banner",
+        "edit"                      => "Edit carousel banner",
+        "index"                     => "Carousel Banners",
+        "show"                      => "Show carouse banner"
+    ],
     "category" => [
         "create"                    => "Kategori oluştur",
         "edit"                      => "Kategori düzenle",
@@ -53,6 +59,12 @@ return [
             "content"               => "İçerik",
             "description"           => "Tanımı",
             "title"                 => "Başlık"
+        ],
+        "carousel" => [
+            "title"                 => "Title",
+            "image"                 => "Content",
+            "description"           => "Title",
+            "language_id"           => "Language"
         ],
         "category" => [
             "color"                 => "Rengi",
@@ -133,6 +145,11 @@ return [
             "add"                   => "Makale Ekle",
             "all"                   => "Tüm Makaleler",
             "root"                  => "Makaleler"
+        ],
+        "carousel" => [
+            "add"                   => "Add a Banner Image",
+            "all"                   => "All Banner Images",
+            "root"                  => "Banner Images"
         ],
         "category" => [
             "add"                   => "Kategori Ekle",

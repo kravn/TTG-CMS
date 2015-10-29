@@ -13,6 +13,12 @@ return [
         "index"                     => "Articles",
         "show"                      => "Show article"
     ],
+    "carousel" => [
+        "create"                    => "Create carousel banner",
+        "edit"                      => "Edit carousel banner",
+        "index"                     => "Carousel Banners",
+        "show"                      => "Show carouse banner"
+    ],
     "category" => [
         "create"                    => "Create category",
         "edit"                      => "Edit category",
@@ -53,6 +59,12 @@ return [
             "content"               => "Content",
             "description"           => "Description",
             "title"                 => "Title"
+        ],
+        "carousel" => [
+            "title"                 => "Title",
+            "image"                 => "Image",
+            "description"           => "Description",
+            "language_id"           => "Language"
         ],
         "category" => [
             "color"                 => "Color",
@@ -133,6 +145,11 @@ return [
             "add"                   => "Add an Article",
             "all"                   => "All Articles",
             "root"                  => "Articles"
+        ],
+        "carousel" => [
+            "add"                   => "Add a Banner Image",
+            "all"                   => "All Banner Images",
+            "root"                  => "Banner Images"
         ],
         "category" => [
             "add"                   => "Add a Category",

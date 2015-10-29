@@ -13,7 +13,7 @@ class CarouselRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class CarouselRequest extends Request
     public function rules()
     {
         return [
-            //
+            'title' => 'required|min:3',
+            'image' => 'sometimes|max:2048|image',
+            'description' => 'required|max:160',
+            'language_id' => 'required|integer'
         ];
     }
 }

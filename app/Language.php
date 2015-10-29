@@ -59,4 +59,12 @@ class Language extends Model
         return $this->hasManyThrough('App\Article', 'App\Category');
     }
 
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function carousels()
+    {
+        return $this->hasMany('App\Carousel');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Carousel;
 use App\Setting;
 use Response;
 use Illuminate\Support\ServiceProvider;
@@ -44,6 +45,14 @@ class GeneralServiceProvider extends ServiceProvider
             }
 
             return Response::make($xml->asXML(), $status, $header);
+        });
+
+        Response::macro('carousel', function()
+        {
+            $language = Session::get('current_lang');
+            $carousel_images = $language->carousels()->get();
+
+            return $carousel_images;
         });
     }
 

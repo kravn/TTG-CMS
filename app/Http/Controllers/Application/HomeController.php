@@ -25,10 +25,10 @@ class HomeController extends Controller
 
         $xml = new SimpleXMLElement($xml, LIBXML_PARSEHUGE);
         $json = json_encode($xml);
-        $games = json_decode($json);
+        $games = json_decode($xml);
         $articles = $this->language->articles()->published()->orderBy('published_at','desc')->paginate(5);
 
-        return view('application.home.index', compact('articles', 'games'));
+        return view('application.home.index', compact('articles', 'games', 'xml'));
 
     }
 }

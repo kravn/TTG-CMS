@@ -24,10 +24,14 @@
     <script src="{{ url( 'js/application-custom.js' ) }}" type="text/javascript"></script>
 </head>
 <body>
-    <div class="section--header">
+    <div class="section--navigation">
+        @include('partials.application.top')
         @include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
     </div>
-    @include('partials.application.top')
+
+    <div class="section--carousel">
+        @include('partials.common.carousel')
+    </div>
     <div class="container">
         <main class="content">
             @yield('content')
