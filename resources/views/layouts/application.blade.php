@@ -32,11 +32,15 @@
     <div class="section--carousel">
         @include('partials.common.carousel')
     </div>
-    <div class="container">
-        <main class="content">
-            @yield('content')
-        </main>
+    <div class="section--content">
+        <div class="container">
+            <main class="content">
+                @yield('content')
+            </main>
+        </div>
     </div>
-    @include('partials.application.footer')
+    <div class="section--footer">
+        @include('partials.application.footer')
+    </div>
 </body>
 </html>

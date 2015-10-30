@@ -1,4 +1,16 @@
 
+@if(count(Session::get('current_lang')->pages))
+    <div class="container">
+        <ul class="nav navbar-nav">
+            @foreach(Session::get('current_lang')->pages->toHierarchy() as $node)
+                @if($node->is_footer)
+                    {!! renderMenuNode($node) !!}
+                @endif
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <script>
     @if(!empty(Config::get('settings')->analytics_id))
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

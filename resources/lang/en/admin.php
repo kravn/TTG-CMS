@@ -58,7 +58,8 @@ return [
             "category_id"           => "Category",
             "content"               => "Content",
             "description"           => "Description",
-            "title"                 => "Title"
+            "title"                 => "Title",
+            "promo_code"            => "Promotion Code"
         ],
         "carousel" => [
             "title"                 => "Title",
@@ -107,6 +108,8 @@ return [
             "description"           => "Description",
             "language_id"           => "Language",
             "title"                 => "Title",
+            "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
+            "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",

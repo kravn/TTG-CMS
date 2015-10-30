@@ -58,7 +58,8 @@ return [
             "category_id"           => "Kategori",
             "content"               => "İçerik",
             "description"           => "Tanımı",
-            "title"                 => "Başlık"
+            "title"                 => "Başlık",
+            "promo_code"            => "Promotion Code"
         ],
         "carousel" => [
             "title"                 => "Title",
@@ -106,7 +107,9 @@ return [
             "content"               => "İçerik",
             "description"           => "Tanımı",
             "language_id"           => "Dil",
-            "title"                 => "Başlık"
+            "title"                 => "Başlık",
+            "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
+            "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
         "published_at"              => "Yayınlanma Tarihi",
         "read_count"                => "Okunma Sayısı",

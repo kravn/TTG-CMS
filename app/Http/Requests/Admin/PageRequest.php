@@ -28,6 +28,8 @@ class PageRequest extends Request
 			'description' => 'required|max:160',
             'language_id' => 'required|integer',
             'title' 	  => 'required|min:3',
+            'is_footer'   => '',
+            'is_navigation' => ''
         ];
 	}
 

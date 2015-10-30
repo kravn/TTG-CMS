@@ -22,6 +22,12 @@ class PagesForm extends Form
             ->add('description', 'text', [
                 'label' => trans('admin.fields.page.description')
             ])
+            ->add('is_navigation', 'text', [
+                'label' => trans('admin.fields.page.is_navigation')
+            ])
+            ->add('is_footer', 'text', [
+                'label' => trans('admin.fields.page.is_footer')
+            ])
             ->add('save', 'submit', [
                 'label' => trans('admin.fields.save'),
                 'attr' => ['class' => 'btn btn-primary']

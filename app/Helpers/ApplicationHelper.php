@@ -22,6 +22,12 @@ if( ! function_exists('limit_to_numwords'))
 }
 
 if( ! function_exists('renderCarousel')) {
+    /**
+     * Render nodes for nested sets (CAROUSEL BANNERS)
+     *
+     * @param $node
+     * @return string
+     */
     function renderCarousel($data_target, $left_icon, $right_icon, $left_label, $right_label)
     {
         $carousel = Session::get('current_lang')->carousels;
