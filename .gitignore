@@ -11,3 +11,7 @@ public/packages
 resources/assets/vendor
 vendor
 _ide_helper.php
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
