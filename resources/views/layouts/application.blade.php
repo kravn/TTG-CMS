@@ -29,9 +29,12 @@
         @include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
     </div>
 
-    <div class="section--carousel">
-        @include('partials.common.carousel')
-    </div>
+    @if(Request::url() === url())
+        <div class="section--carousel">
+            @include('partials.common.carousel')
+        </div>
+    @endif
+
     <div class="section--content">
         <div class="container">
             <main class="content">

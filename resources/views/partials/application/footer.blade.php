@@ -2,7 +2,7 @@
 @if(count(Session::get('current_lang')->pages))
     <div class="container">
         <ul class="nav navbar-nav">
-            @foreach(Session::get('current_lang')->pages->toHierarchy() as $node)
+            @foreach(Session::get('current_lang')->pages as $node)
                 @if($node->is_footer)
                     {!! renderMenuNode($node) !!}
                 @endif
