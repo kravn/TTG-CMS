@@ -13,6 +13,12 @@ return [
         "index"                     => "Makaleler",
         "show"                      => "Makale göster"
     ],
+    "carousel" => [
+        "create"                    => "Create carousel banner",
+        "edit"                      => "Edit carousel banner",
+        "index"                     => "Carousel Banners",
+        "show"                      => "Show carouse banner"
+    ],
     "category" => [
         "create"                    => "Kategori oluştur",
         "edit"                      => "Kategori düzenle",
@@ -52,7 +58,14 @@ return [
             "category_id"           => "Kategori",
             "content"               => "İçerik",
             "description"           => "Tanımı",
-            "title"                 => "Başlık"
+            "title"                 => "Başlık",
+            "promo_code"            => "Promotion Code"
+        ],
+        "carousel" => [
+            "title"                 => "Title",
+            "image"                 => "Content",
+            "description"           => "Title",
+            "language_id"           => "Language"
         ],
         "category" => [
             "color"                 => "Rengi",
@@ -94,7 +107,9 @@ return [
             "content"               => "İçerik",
             "description"           => "Tanımı",
             "language_id"           => "Dil",
-            "title"                 => "Başlık"
+            "title"                 => "Başlık",
+            "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
+            "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
         "published_at"              => "Yayınlanma Tarihi",
         "read_count"                => "Okunma Sayısı",
@@ -133,6 +148,11 @@ return [
             "add"                   => "Makale Ekle",
             "all"                   => "Tüm Makaleler",
             "root"                  => "Makaleler"
+        ],
+        "carousel" => [
+            "add"                   => "Add a Banner Image",
+            "all"                   => "All Banner Images",
+            "root"                  => "Banner Images"
         ],
         "category" => [
             "add"                   => "Kategori Ekle",

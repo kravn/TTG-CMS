@@ -1,7 +1,9 @@
 @if(count(Session::get('current_lang')->pages))
     <ul class="nav navbar-nav">
         @foreach(Session::get('current_lang')->pages->toHierarchy() as $node)
-            {!! renderMenuNode($node) !!}
+            @if($node->is_navigation)
+                {!! renderMenuNode($node) !!}
+            @endif
         @endforeach
     </ul>
 @endif

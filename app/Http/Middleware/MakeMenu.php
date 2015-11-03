@@ -92,6 +92,19 @@ class MakeMenu
                 ->icon($this->circle)
                 ->prependIcon();
 
+            // CAROUSEL
+            $carousels = $menu->add(trans('admin.menu.carousel.root'), '#')
+                ->icon('apple')
+                ->prependIcon();
+
+            $carousels->add(trans('admin.menu.carousel.add'), ['route' => 'admin.carousel.create'])
+                ->icon('circle-o')
+                ->prependIcon();
+
+            $carousels->add(trans('admin.menu.carousel.all'), ['route' => 'admin.carousel.index'])
+                ->icon('circle-o')
+                ->prependIcon();
+
             $settings = $menu->add(trans('admin.menu.setting'), ['route' => 'admin.setting.index'])
                 ->icon('gears')
                 ->prependIcon();

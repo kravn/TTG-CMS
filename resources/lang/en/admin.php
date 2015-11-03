@@ -13,6 +13,12 @@ return [
         "index"                     => "Articles",
         "show"                      => "Show article"
     ],
+    "carousel" => [
+        "create"                    => "Create carousel banner",
+        "edit"                      => "Edit carousel banner",
+        "index"                     => "Carousel Banners",
+        "show"                      => "Show carouse banner"
+    ],
     "category" => [
         "create"                    => "Create category",
         "edit"                      => "Edit category",
@@ -52,7 +58,14 @@ return [
             "category_id"           => "Category",
             "content"               => "Content",
             "description"           => "Description",
-            "title"                 => "Title"
+            "title"                 => "Title",
+            "promo_code"            => "Promotion Code"
+        ],
+        "carousel" => [
+            "title"                 => "Title",
+            "image"                 => "Image",
+            "description"           => "Description",
+            "language_id"           => "Language"
         ],
         "category" => [
             "color"                 => "Color",
@@ -95,6 +108,8 @@ return [
             "description"           => "Description",
             "language_id"           => "Language",
             "title"                 => "Title",
+            "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
+            "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",
@@ -133,6 +148,11 @@ return [
             "add"                   => "Add an Article",
             "all"                   => "All Articles",
             "root"                  => "Articles"
+        ],
+        "carousel" => [
+            "add"                   => "Add a Banner Image",
+            "all"                   => "All Banner Images",
+            "root"                  => "Banner Images"
         ],
         "category" => [
             "add"                   => "Add a Category",

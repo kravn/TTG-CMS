@@ -28,7 +28,8 @@ class ArticleRequest extends Request
 			'content' 	   => 'required',
 			'description'  => 'required|max:160',
 			'published_at' => 'required|date',
-            'title' 	   => 'required|min:3'
+            'title' 	   => 'required|min:3',
+            'promo_code'   => ''
         ];
 	}
 

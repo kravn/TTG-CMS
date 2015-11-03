@@ -1,32 +1,24 @@
-<?php
-
-namespace App\Forms;
+<?php namespace App\Forms;
 
 use Kris\LaravelFormBuilder\Form;
 
-class PagesForm extends Form
+class CarouselsForm extends Form
 {
     public function buildForm()
     {
         $this
             ->add('language_id', 'choice', [
                 'choices' => $this->data,
-                'label' => trans('admin.fields.page.language_id')
+                'label' => trans('admin.fields.carousel.language_id')
             ])
             ->add('title', 'text', [
-                'label' => trans('admin.fields.page.title')
+                'label' => trans('admin.fields.carousel.title')
             ])
-            ->add('content', 'textarea', [
-                'label' => trans('admin.fields.page.content')
+            ->add('image', 'file', [
+                'label' => trans('admin.fields.carousel.image')
             ])
             ->add('description', 'text', [
-                'label' => trans('admin.fields.page.description')
-            ])
-            ->add('is_navigation', 'text', [
-                'label' => trans('admin.fields.page.is_navigation')
-            ])
-            ->add('is_footer', 'text', [
-                'label' => trans('admin.fields.page.is_footer')
+                'label' => trans('admin.fields.carousel.description')
             ])
             ->add('save', 'submit', [
                 'label' => trans('admin.fields.save'),
