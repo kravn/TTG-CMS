@@ -10,7 +10,7 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->delete();
-        TestDummy::times(5)->create('App\Category');
+        TestDummy::times(3)->create('App\Category');
     }
 
 }
