@@ -21,6 +21,7 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->date('published_at');
             $table->string('description');
+            $table->string('promo_code');
             $table->integer('read_count')->default(0);
             $table->timestamps();
         });

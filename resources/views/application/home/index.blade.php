@@ -4,6 +4,9 @@
 @section('description'){{ getDescription() }}@endsection
 
 @section('content')
+
+    @include('partials.common.games')
+
     @if(count($articles))
         @foreach($articles as $article)
             <article class="post">

@@ -21,6 +21,53 @@ if( ! function_exists('limit_to_numwords'))
     }
 }
 
+if( ! function_exists('renderCarousel')) {
+    /**
+     * Render nodes for nested sets (CAROUSEL BANNERS)
+     *
+     * @param $node
+     * @return string
+     */
+    function renderCarousel($data_target, $left_icon, $right_icon, $left_label, $right_label)
+    {
+        $carousel = Session::get('current_lang')->carousels;
+        $html = '';
+        $indicator = '';
+        $slides = '';
+        $carousel_indicators = 'class="carousel-indicators"';
+        $carousel_inner = 'class="carousel-inner" role="listbox"';
+        $carousel_right_control = 'class="right carousel-control" href="' . $data_target .'" role="button" data-slide="next"';
+        $carousel_left_control = 'class="left carousel-control" href="' . $data_target .'" role="button" data-slide="prev"';
+        if ($carousel) {
+            // Collecting carousel indicators, slide images
+            $indicator .= '<ol ' . $carousel_indicators . '>';
+            $slides .= '<div ' . $carousel_inner . '>';
+            $counter = 0;
+            foreach($carousel as $img) {
+                if($counter == 0) {
+                    $indicator .= '<li data-target="' . $data_target . '" data-slide-to="' . $counter . '" class="active"></li>';
+                    $slides .= '<div class="item active"><img src="' . $img->image . '" alt="' . $img->title . '"></div>';
+                }
+                else {
+                    $indicator .= '<li data-target="' . $data_target . '" data-slide-to="' . $counter . '"></li>';
+                    $slides .= '<div class="item"><img src="' . $img->image . '" alt="' . $img->title . '"></div>';
+                }
+                $counter++;
+            }
+            $indicator .= '</ol>';
+            $slides .= '</div>';
+        }
+        $carousel_right_control =   '<a ' . $carousel_right_control . '>' .
+            '<span class="' . $right_icon . '" aria-hidden="true"></span>' .
+            '<span class="sr-only">' . $right_label . '</span></a>';
+        $carousel_left_control =   '<a ' . $carousel_left_control . '>' .
+            '<span class="' . $left_icon . '" aria-hidden="true"></span>' .
+            '<span class="sr-only">' . $left_label . '</span></a>';
+        $html = $indicator . $slides . $carousel_left_control . $carousel_right_control;
+        return $html;
+    }
+}
+
 if( ! function_exists('renderMenuNode')) {
     /**
      * Render nodes for nested sets

@@ -1,0 +1,68 @@
+// Text color definitions
+@dark: #000;
+@light: #efefef;
+
+// Navigation Theme/Skin
+._nav_theme (@color) {
+  background: @color;
+  margin-bottom: 0;
+  .inside{
+    margin: 1rem auto;
+    width: 100%;
+    .navbar-brand {
+      float: left;
+      padding: 0px;
+      font-size: 18px;
+      line-height: 20px;
+      padding-right: 40px;
+    }
+    .navbar-nav {
+      li {
+        font-size: 18px;
+      }
+      li:hover {
+        a {
+          color: #fff;
+        }
+      }
+      .open {
+        a {
+          color: #555;
+          background: #222;
+        }
+        .dropdown-menu {
+          background: #222;
+        }
+      }
+    }
+  }
+}
+
+
+//NAVIGATION SKINNING
+.section--navigation {
+  .navbar-default {
+    border: none;
+  }
+}
+
+//CAROUSEL SKINNING
+.section--carousel {
+  top: 70px;
+  position: relative;
+  #carousel-banner {
+    .carousel-inner {
+      .item img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section--footer {
+  ul {
+    li {
+      display: inline-flex;
+    }
+  }
+}

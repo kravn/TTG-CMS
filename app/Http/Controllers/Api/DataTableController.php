@@ -8,6 +8,7 @@ use App\User;
 use Carbon\Carbon;
 use Datatable;
 use Illuminate\Http\Request;
+use Session;
 
 class DataTableController extends Controller
 {
@@ -95,6 +96,31 @@ class DataTableController extends Controller
             ->orderColumns('code', 'title', 'updated_at')
             ->make();
     }
+
+
+    /**
+     * JSON data for seeding Carousel Banners
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
+     */
+    public function getCarousels()
+    {
+        $language = Session::get('current_lang');
+        return Datatable::collection($language->carousels)
+            ->showColumns('title')
+            ->addColumn('updated_at', function($model)
+            {
+                return $model->updated_at->diffForHumans();
+            })
+            ->addColumn('',function($model)
+            {
+                return get_ops('carousel', $model->id);
+            })
+            ->searchColumns('title')
+            ->orderColumns('title')
+            ->make();
+    }
+
 
     /**
      * JSON data for seeding Users

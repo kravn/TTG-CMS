@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-custom">
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
     <div class="container">
         <div class="inside">
             <div class="navbar-header">
@@ -8,7 +8,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{  route('root') }}">{{ Session::get('current_lang')->site_title }}</a>
+                <a class="navbar-brand" href="{{  route('root') }}">
+                    <img src="{{ response()->logo() }}" alt=""/>
+                </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 @include('partials.menu.application')
