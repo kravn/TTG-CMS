@@ -12,7 +12,7 @@ class CreateCategoriesTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('categories', function(Blueprint $table) {
+        Schema::create('categories', function(Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('language_id');
             $table->foreign('language_id')->references('id')->on('languages');
