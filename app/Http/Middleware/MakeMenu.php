@@ -105,6 +105,19 @@ class MakeMenu
                 ->icon('circle-o')
                 ->prependIcon();
 
+            // PARTNERS
+            $partners = $menu->add(trans('admin.menu.partner.root'), '#')
+                ->icon('apple')
+                ->prependIcon();
+
+            $partners->add(trans('admin.menu.partner.add'), ['route' => 'admin.partner.create'])
+                ->icon('circle-o')
+                ->prependIcon();
+
+            $partners->add(trans('admin.menu.partner.all'), ['route' => 'admin.partner.index'])
+                ->icon('circle-o')
+                ->prependIcon();
+
             $settings = $menu->add(trans('admin.menu.setting'), ['route' => 'admin.setting.index'])
                 ->icon('gears')
                 ->prependIcon();

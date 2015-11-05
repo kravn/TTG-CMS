@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Language;
+use App\Partner;
 use App\User;
 use Carbon\Carbon;
 use Datatable;
@@ -145,6 +146,27 @@ class DataTableController extends Controller
             })
             ->searchColumns('ip_address', 'name')
             ->orderColumns('logged_in_at','logged_out_at', 'name')
+            ->make();
+    }
+
+
+    public function getPartners()
+    {
+        return Datatable::collection(Partner::all())
+            ->showColumns('title')
+            ->addColumn('logo', function($model)
+            {
+                return '<img src="' . $model->logo . '"/>';
+            })
+            ->addColumn('updated_at', function($model)
+            {
+                return $model->updated_at->diffForHumans();
+            })
+            ->addColumn('', function ($model) {
+                return get_ops('partner', $model->id);
+            })
+            ->searchColumns('title')
+            ->orderColumns('title', 'logo')
             ->make();
     }
 

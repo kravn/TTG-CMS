@@ -38,6 +38,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
     Route::get('table/language', ['as'=>'api.table.language', 'uses'=>'DataTableController@getLanguages']);
     Route::get('table/user', ['as'=>'api.table.user', 'uses'=>'DataTableController@getUsers']);
     Route::get('table/carousel', ['as'=>'api.table.carousel', 'uses'=>'DataTableController@getCarousels']);
+    Route::get('table/partner', ['as'=>'api.table.partner', 'uses'=>'DataTableController@getPartners']);
 });
 
 // Admin routes
@@ -58,4 +59,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('page', 'PageController');
     Route::resource('user', 'UserController');
     Route::resource('carousel', 'CarouselController');
+    Route::resource('partner', 'PartnerController');
 });

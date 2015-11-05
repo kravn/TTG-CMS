@@ -111,6 +111,10 @@ return [
             "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
             "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
+        "partner" => [
+            "title"                 => "Title",
+            "logo"                  => "Logo"
+        ],
         "published_at"              => "Yayınlanma Tarihi",
         "read_count"                => "Okunma Sayısı",
         "reset"                     => "Reset",
@@ -170,6 +174,11 @@ return [
             "all"                   => "Tüm Sayfalar",
             "root"                  => "Sayfalar"
         ],
+        "partner" => [
+            "add"                   => "Add a Partner",
+            "all"                   => "All Partners",
+            "root"                  => "Partners"
+        ],
         "setting"                   => "Ayarlar",
         "user" => [
             "add"                   => "Kullanıcı Ekle",
@@ -192,6 +201,12 @@ return [
         "edit"                      => "Sayfa düzenle",
         "index"                     => "Sayfalar",
         "show"                      => "Sayfa göster"
+    ],
+    "partner" => [
+        "create"                    => "Create partner",
+        "edit"                      => "Edit partner",
+        "index"                     => "Partners",
+        "show"                      => "Show partner"
     ],
     "profile"                       => "Profil",
     "root"                          => "Dashboard",

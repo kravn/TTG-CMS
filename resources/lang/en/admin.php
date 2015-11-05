@@ -111,6 +111,10 @@ return [
             "is_navigation"         => "Set as Menu Item (1 as TRUE, 0 as FALSE)",
             "is_footer"             => "Set as Footer Item (1 as TRUE, 0 as FALSE)"
         ],
+        "partner" => [
+            "title"                 => "Title",
+            "logo"                  => "Logo"
+        ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",
         "reset"                     => "Reset",
@@ -170,6 +174,11 @@ return [
             "all"                   => "All Pages",
             "root"                  => "Pages"
         ],
+        "partner" => [
+            "add"                   => "Add a Partner",
+            "all"                   => "All Partners",
+            "root"                  => "Partners"
+        ],
         "setting"                   => "Settings",
         "user" => [
             "add"                   => "Add a User",
@@ -192,6 +201,12 @@ return [
         "edit"                      => "Edit page",
         "show"                      => "Show page",
         "index"                     => "Pages"
+    ],
+    "partner" => [
+        "create"                    => "Create partner",
+        "edit"                      => "Edit partner",
+        "index"                     => "Partners",
+        "show"                      => "Show partner"
     ],
     "profile"                       => "Profile",
     "root"                          => "Dashboard",

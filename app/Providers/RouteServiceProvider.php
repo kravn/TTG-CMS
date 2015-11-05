@@ -31,6 +31,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('setting', 'App\Setting');
         $router->model('user', 'App\User');
         $router->model('carousel', 'App\Carousel');
+        $router->model('partner', 'App\Partner');
         parent::boot($router);
     }
 
