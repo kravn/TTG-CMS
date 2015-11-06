@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{  route('root') }}">
-                    <img src="{{ response()->logo() }}" alt=""/>
+                    <img src="{{ $logo }}" alt=""/>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">

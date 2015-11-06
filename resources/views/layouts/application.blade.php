@@ -42,6 +42,9 @@
             </main>
         </div>
     </div>
+    <div class="section--partners">
+        @include('partials.application.partners')
+    </div>
     <div class="section--footer">
         @include('partials.application.footer')
     </div>

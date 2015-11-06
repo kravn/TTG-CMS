@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Carousel;
+use App\Partner;
 use App\Setting;
 use Response;
+use App;
 use Illuminate\Support\ServiceProvider;
 
 class GeneralServiceProvider extends ServiceProvider
@@ -16,10 +18,6 @@ class GeneralServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Response::macro('logo', function()
-        {
-            return $logo = Setting::first()->logo;
-        });
 
         Response::macro('xml', function(array $vars, $status = 200, array $header = [], $rootElement = 'response', $xml = null)
         {
@@ -47,13 +45,9 @@ class GeneralServiceProvider extends ServiceProvider
             return Response::make($xml->asXML(), $status, $header);
         });
 
-        Response::macro('carousel', function()
-        {
-            $language = Session::get('current_lang');
-            $carousel_images = $language->carousels()->get();
+        $this->logo();
+        $this->partners();
 
-            return $carousel_images;
-        });
     }
 
     /**
@@ -65,4 +59,20 @@ class GeneralServiceProvider extends ServiceProvider
     {
         //
     }
+
+    /**
+     * Customized application services
+     *
+     * returns Logo
+     */
+    private function logo() {
+        $logo = Setting::first()->logo;
+        view()->share('logo', $logo);
+    }
+
+    public function partners(){
+        $partners = Partner::all();
+        view()->share('partners', $partners);
+    }
+
 }

@@ -1,3 +1,5 @@
+// Default Section Padding
+@default-padding: 40px 0px;
 // Text color definitions
 @dark: #000;
 @light: #efefef;
@@ -38,6 +40,9 @@
   }
 }
 
+.default-padding {
+  padding: 40px 0;
+}
 
 //NAVIGATION SKINNING
 .section--navigation {
@@ -59,8 +64,20 @@
   }
 }
 
+.section--partners {
+  background: #CCC;
+  padding: @default-padding;
+  .container {
+    display: block;
+    text-align: center;
+    img {
+      display: inline;
+    }
+  }
+}
+
 .section--footer {
-  padding: 30px 0;
+  padding: @default-padding;
   background: #d52427;
   ul {
     margin: 0;

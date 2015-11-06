@@ -31,7 +31,7 @@ if( ! function_exists('renderCarousel')) {
     function renderCarousel($data_target, $left_icon, $right_icon, $left_label, $right_label)
     {
         $carousel = Session::get('current_lang')->carousels;
-        $html = '';
+
         $indicator = '';
         $slides = '';
         $carousel_indicators = 'class="carousel-indicators"';
