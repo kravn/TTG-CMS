@@ -115,6 +115,13 @@ return [
             "title"                 => "Title",
             "logo"                  => "Logo"
         ],
+        "promotion" => [
+            "content"               => "Content",
+            "language_id"           => "Language",
+            "title"                 => "Title",
+            "promo_id"              => "Promotions ID",
+            "image"                 => "Image"
+        ],
         "published_at"              => "Yayınlanma Tarihi",
         "read_count"                => "Okunma Sayısı",
         "reset"                     => "Reset",
@@ -179,6 +186,11 @@ return [
             "all"                   => "All Partners",
             "root"                  => "Partners"
         ],
+        "promotion" => [
+            "add"                   => "Add a Promotion",
+            "all"                   => "All Promotions",
+            "root"                  => "Promotions"
+        ],
         "setting"                   => "Ayarlar",
         "user" => [
             "add"                   => "Kullanıcı Ekle",
@@ -209,6 +221,12 @@ return [
         "show"                      => "Show partner"
     ],
     "profile"                       => "Profil",
+    "promotion" => [
+        "create"                    => "Create promotion",
+        "edit"                      => "Edit promotion",
+        "index"                     => "Promotions",
+        "show"                      => "Show promotion"
+    ],
     "root"                          => "Dashboard",
     "setting" => [
         "index"                     => "Ayarlar"
@@ -224,6 +242,15 @@ return [
         "edit"                      => "Kullanıcı düzenle",
         "index"                     => "Kullanıcılar",
         "show"                      => "Kullanıcı göster"
+    ],
+    "labels" => [
+        "headers" => [
+            "partners"              => "Partners and Affiliates"
+        ],
+        "navigation" => [
+            "promotion"             => "Promotions",
+            "games"                 => "Games"
+        ]
     ]
 
 ];

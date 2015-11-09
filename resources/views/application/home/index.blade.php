@@ -35,5 +35,6 @@
             </article>
         @endforeach
         {!! $articles->render() !!}
+
     @endif
 @endsection

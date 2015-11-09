@@ -1,5 +1,5 @@
 <h1>LIST OF GAMES</h1>
---- {{ $xml }} ---
+--- {{ $games }} ---
 @foreach($xml->menu as $x)
     <li>{{ $x->submenu }}</li>
 @endforeach

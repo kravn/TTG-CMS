@@ -170,6 +170,24 @@ class DataTableController extends Controller
             ->make();
     }
 
+    public function getPromotions()
+    {
+        $language = Session::get('current_lang');
+        return Datatable::collection($language->promotions)
+            ->showColumns('title')
+            ->addColumn('updated_at', function($model)
+            {
+                return $model->updated_at->diffForHumans();
+            })
+            ->addColumn('',function($model)
+            {
+                return get_ops('promotion', $model->id);
+            })
+            ->searchColumns('title')
+            ->orderColumns('title')
+            ->make();
+    }
+
     private function setDateTime(Carbon $datetime)
     {
         return $datetime->year > 0 ? $datetime . "<br/><small>(" . $datetime->diffForHumans() . ")</small>" : "-";

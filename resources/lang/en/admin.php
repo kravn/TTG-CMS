@@ -115,6 +115,13 @@ return [
             "title"                 => "Title",
             "logo"                  => "Logo"
         ],
+        "promotion" => [
+            "content"               => "Content",
+            "language_id"           => "Language",
+            "title"                 => "Title",
+            "promo_id"              => "Promotions ID",
+            "image"                 => "Image"
+        ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",
         "reset"                     => "Reset",
@@ -179,6 +186,11 @@ return [
             "all"                   => "All Partners",
             "root"                  => "Partners"
         ],
+        "promotion" => [
+            "add"                   => "Add a Promotion",
+            "all"                   => "All Promotions",
+            "root"                  => "Promotions"
+        ],
         "setting"                   => "Settings",
         "user" => [
             "add"                   => "Add a User",
@@ -209,6 +221,12 @@ return [
         "show"                      => "Show partner"
     ],
     "profile"                       => "Profile",
+    "promotion" => [
+        "create"                    => "Create promotion",
+        "edit"                      => "Edit promotion",
+        "index"                     => "Promotions",
+        "show"                      => "Show promotion"
+    ],
     "root"                          => "Dashboard",
     "setting" => [
         "index"                     => "Settings"
@@ -224,6 +242,15 @@ return [
         "edit"                      => "Edit user",
         "index"                     => "Users",
         "show"                      => "Show user"
+    ],
+    "labels" => [
+        "headers" => [
+            "partners"              => "Partners and Affiliates"
+        ],
+        "navigation" => [
+            "promotion"             => "Promotions",
+            "games"                 => "Games"
+        ]
     ]
 
 ];

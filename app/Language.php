@@ -67,4 +67,12 @@ class Language extends Model
     {
         return $this->hasMany('App\Carousel');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function promotions()
+    {
+        return $this->hasMany('App\Promotion');
+    }
 }

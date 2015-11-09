@@ -118,6 +118,19 @@ class MakeMenu
                 ->icon('circle-o')
                 ->prependIcon();
 
+            // PROMOTIONS
+            $promotions = $menu->add(trans('admin.menu.promotion.root'), '#')
+                ->icon('apple')
+                ->prependIcon();
+
+            $promotions->add(trans('admin.menu.promotion.add'), ['route' => 'admin.promotion.create'])
+                ->icon('circle-o')
+                ->prependIcon();
+
+            $promotions->add(trans('admin.menu.promotion.all'), ['route' => 'admin.promotion.index'])
+                ->icon('circle-o')
+                ->prependIcon();
+
             $settings = $menu->add(trans('admin.menu.setting'), ['route' => 'admin.setting.index'])
                 ->icon('gears')
                 ->prependIcon();
