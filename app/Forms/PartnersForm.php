@@ -11,7 +11,7 @@ class PartnersForm extends Form
                 'label' => trans('admin.fields.partner.title')
             ])
             ->add('logo', 'file', [
-                'label' => trans('admin.fields.partner.image')
+                'label' => trans('admin.fields.partner.logo')
             ])
             ->add('save', 'submit', [
                 'label' => trans('admin.fields.save'),

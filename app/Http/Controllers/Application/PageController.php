@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Application;
 
 use App\Http\Controllers\Controller;
 use App\Page;
+use App\Promotion;
 
 class PageController extends Controller
 {
@@ -16,6 +17,11 @@ class PageController extends Controller
     public function index(Page $page)
     {
         return view('application.page.index', compact('page'));
+    }
+
+    public function promotions(){
+        $promotions = Promotion::all();
+        return view('application.page.promotions', compact('promotions'));
     }
 
 }

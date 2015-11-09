@@ -17,7 +17,7 @@ class PromotionsForm extends Form
             ->add('promotions_id', 'text', [
                 'label' => trans('admin.fields.promotion.promo_id')
             ])
-            ->add('context', 'textarea', [
+            ->add('content', 'textarea', [
                 'label' => trans('admin.fields.promotion.content')
             ])
             ->add('save', 'submit', [

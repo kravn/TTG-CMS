@@ -25,7 +25,7 @@ class PromotionRequest extends Request
     {
         return [
             'title' => 'required|min:3',
-            'context' => 'required|max:3000',
+            'content' => 'required|max:3000',
             'promotions_id' => 'required|integer',
             'language_id' => 'required|integer'
         ];

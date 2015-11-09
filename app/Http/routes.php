@@ -8,6 +8,7 @@ Route::group(['namespace' => 'Application', 'middleware' => 'app'], function()
     Route::get('page/{page}',  ['as' => 'page', 'uses' => 'PageController@index']);
     Route::get('category/{category}',  ['as' => 'category', 'uses' => 'CategoryController@index']);
     Route::post('language/change', ['as' => 'app.language.change' , 'uses' => 'LanguageController@postChange']);
+    Route::get('promotions', 'PageController@promotions');
 });
 
 // Auth routes

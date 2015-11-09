@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav navbar-left">
-    <li><a href="#" targer="_blank">{{ trans('admin.labels.navigation.promotion') }}</a></li>
+    <li><a href="{{ action('Application\PageController@promotions') }}" targer="_blank">{{ trans('admin.labels.navigation.promotion') }}</a></li>
 </ul>
 
 @if(count(Session::get('current_lang')->pages))

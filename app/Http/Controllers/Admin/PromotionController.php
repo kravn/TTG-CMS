@@ -76,7 +76,7 @@ class PromotionController extends Controller
         $languages = Language::lists('title', 'id')->all();
         $form = $formBuilder->create('App\Forms\PromotionsForm', [
             'method' => 'PATCH',
-            'url' => route('admin.category.update', ['id' => $promotion->id]),
+            'url' => route('admin.promotion.update', ['id' => $promotion->id]),
             'model' => $promotion
         ], $languages);
         return view('admin.promotions.edit', compact('form', 'promotion'));
