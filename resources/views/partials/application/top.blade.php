@@ -16,5 +16,6 @@
                 @include('partials.menu.application')
             </div>
         </div>
+        @include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
     </div>
 </nav>

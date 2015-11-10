@@ -26,7 +26,6 @@
 <body>
     <div class="section--navigation">
         @include('partials.application.top')
-        @include('partials.common.languages', ['languages' => Config::get('languages'), 'route' => 'app.language.change' ])
     </div>
 
     @if(Request::url() === url())
