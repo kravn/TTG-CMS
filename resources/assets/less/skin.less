@@ -49,6 +49,13 @@
   .navbar-default {
     border: none;
   }
+  ul.languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    background: transparent;
+  }
 }
 
 //SECTION CONTENT
@@ -91,9 +98,21 @@
     li {
       display: inline-flex;
       float: none;
-      color: #fff;
-      :hover { background: none; }
-      a { color: #fff; }
+      border-right: 1px dashed rgba(255,255,255,0.7);
+      :hover {
+        background: none;
+        color: rgba(255,255,255,0.9);
+      }
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        font-weight: 100;
+        padding: 2px 10px;
+        margin-right: 4px;
+      }
+    }
+    li:last-child {
+      border: none;
     }
   }
 }

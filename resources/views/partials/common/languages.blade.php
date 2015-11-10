@@ -1,4 +1,7 @@
 @if(count($languages))
+    <div class="container">
+
+    </div>
     <ul class="languages text-center">
         @foreach($languages as $lang)
             <li>
