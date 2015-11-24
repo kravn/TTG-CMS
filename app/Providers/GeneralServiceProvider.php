@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Carousel;
+use Session;
 use App\Partner;
 use App\Setting;
 use Response;
@@ -47,6 +48,7 @@ class GeneralServiceProvider extends ServiceProvider
 
         $this->logo();
         $this->partners();
+        $this->copyright();
 
     }
 
@@ -73,6 +75,11 @@ class GeneralServiceProvider extends ServiceProvider
     public function partners(){
         $partners = Partner::all();
         view()->share('partners', $partners);
+    }
+
+    public function copyright(){
+        $copyright = Session::get('current_lang');
+        view()->share('copyright', $copyright);
     }
 
 }

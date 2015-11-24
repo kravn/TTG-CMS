@@ -12,7 +12,10 @@ class AddSiteFootnoteToLanguages extends Migration
      */
     public function up()
     {
-        
+        Schema::table('languages', function(Blueprint $table)
+        {
+            $table->string('site_footnote');
+        });
     }
 
     /**
@@ -22,6 +25,8 @@ class AddSiteFootnoteToLanguages extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('languages', function(Blueprint $table) {
+            $table->dropColumn('site_footnote');
+        });
     }
 }

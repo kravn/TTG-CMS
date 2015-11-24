@@ -101,6 +101,7 @@ return [
             "flag"                  => "Bayrak",
             "site_description"      => "Site Tanımı",
             "site_title"            => "Site Başlığı",
+            "site_footnote"         => "Site Footnote",
             "title"                 => "Adı"
         ],
         "page" => [

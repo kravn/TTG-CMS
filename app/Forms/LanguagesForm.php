@@ -21,6 +21,9 @@ class LanguagesForm extends Form
             ->add('site_description', 'text', [
                 'label' => trans('admin.fields.language.site_description')
             ])
+            ->add('site_footnote', 'text', [
+                'label' => trans('admin.fields.language.site_footnote')
+            ])
             ->add('flag', 'file', [
                 'label' => trans('admin.fields.language.flag'),
                 'attr' => ['class' => '']

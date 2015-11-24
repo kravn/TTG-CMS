@@ -101,6 +101,7 @@ return [
             "flag"                  => "Flag",
             "site_description"      => "Site Description",
             "site_title"            => "Site Title",
+            "site_footnote"         => "Site Footnote",
             "title"                 => "Title"
         ],
         "page" => [

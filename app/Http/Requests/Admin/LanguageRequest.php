@@ -28,6 +28,7 @@ class LanguageRequest extends Request
 			'flag' 			   => 'sometimes|max:2048|image',
 			'site_description' => 'required|max:160',
             'site_title' 	   => 'required|max:160',
+            'site_footnote'    => 'required|max:500',
 			'title' 		   => 'required|min:3'
 		];
 	}

@@ -47,5 +47,9 @@
     <div class="section--footer">
         @include('partials.application.footer')
     </div>
+    <div class="section--copyright">
+        <p> {{ Session::get('current_lang')->site_footnote }}</p>
+    </div>
+
 </body>
 </html>
