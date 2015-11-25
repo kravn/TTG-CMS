@@ -1,10 +1,12 @@
 <div class="row">
     @foreach ($xml->menu->submenu[0]->game as $games)
-        <div class="col-md-2 col-lg-2">
-            <a href="#">
-                <img src="https://ams-games.stg.ttms.co/player/images/games/{{ $games['id'] }}.png">
-                {{ $games['display'] }}
-            </a>
+        <div class="col-xs-4 col-md-2">
+            <div class="game-icon">
+                <a href="#">
+                    <img src="https://ams-games.stg.ttms.co/player/images/games/{{ $games['id'] }}.png">
+                    {{ $games['display'] }}
+                </a>
+            </div>
         </div>
     @endforeach
 </div>
@@ -36,3 +38,6 @@
         </article>
     @endforeach
 </div>
+
+
+

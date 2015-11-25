@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
+
     <meta name="_token" content="{{ csrf_token() }}" />
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ Request::url() }}">
@@ -22,6 +23,7 @@
     <![endif]-->
     <script src="{{ url( elixir('js/application.js') ) }}" type="text/javascript"></script>
     <script src="{{ url( 'js/application-custom.js' ) }}" type="text/javascript"></script>
+
 </head>
 <body>
     <div class="section--navigation">
@@ -41,6 +43,7 @@
             </main>
         </div>
     </div>
+
     <div class="section--partners">
         @include('partials.application.partners')
     </div>
