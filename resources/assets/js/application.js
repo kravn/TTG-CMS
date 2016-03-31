@@ -1,3 +1,9 @@
+$(window).load(function() {
+    $.get('games', function(data) {
+        console.log(data.menu['@attributes'].account);
+    });
+});
+
 $(function() {
     $('img').addClass('img-responsive');
     $('iframe[src*="youtube.com"]').each(function() {

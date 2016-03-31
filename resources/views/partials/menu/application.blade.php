@@ -1,5 +1,7 @@
 <ul class="nav navbar-nav navbar-left">
-    <li><a href="{{ action('Application\PageController@promotions') }}" targer="_blank">{{ trans('admin.labels.navigation.promotion') }}</a></li>
+    <li><a href="{{ action('Application\PageController@promotions') }}">{{ trans('admin.labels.navigation.promotion') }}</a></li>
+    <li><a href="#popular-games">{{ trans('application.labels.headers.games') }}</a></li>
+    <li><a href="#partners">{{ trans('application.labels.headers.partners') }}</a></li>
 </ul>
 
 @if(count(Session::get('current_lang')->pages))
@@ -13,7 +15,7 @@
 @endif
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="#" targer="_blank"><i class="fa fa-user"></i> Login </a></li>
+    <li><a href="{{ route('login') }}" targer="_blank"><i class="fa fa-user"></i> Login </a></li>
     <!--
     @if(!empty(Config::get('settings')->facebook))
         <li><a target="_blank" href="{{ Config::get('settings')->facebook }}"><i class="fa fa-facebook"></i></a></li>

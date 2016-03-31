@@ -24,4 +24,9 @@ class PageController extends Controller
         return view('application.page.promotions', compact('promotions'));
     }
 
+    public function login(){
+        $user = 'Marx Stingray';
+        return view('application.page.login', compact('user'));
+    }
+
 }

@@ -5,7 +5,4 @@
 
 @section('content')
 
-    @include('partials.common.games')
-
-
 @endsection

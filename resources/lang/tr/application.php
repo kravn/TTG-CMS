@@ -9,6 +9,15 @@ return [
     */
 
     "home"          => "Anasayfa",
-    "read_more"     => "Devamını Oku"
+    "read_more"     => "Devamını Oku",
+
+    "labels" => [
+        "headers" => [
+            "popular_games"         => "En Popüler Oyunlar",
+            "games"                 => "Oyunlar",
+            "partners_and_affiliates" => "Parkners and Affiliates",
+            "partners"              => "Parkners"
+        ]
+    ]
 
 ];

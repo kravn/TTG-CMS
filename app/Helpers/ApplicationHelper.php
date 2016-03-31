@@ -102,6 +102,21 @@ if( ! function_exists('renderMenuNode')) {
     }
 }
 
+if( ! function_exists('renderGameMenu')) {
+    /**
+     * Render nodes for nested sets
+     *
+     * @param $node
+     * @return string
+     */
+    function renderGameMenu()
+    {
+        $html = games(); //'<div class="jumbotron">LIST OF GAMES</div>';
+
+        return $html;
+    }
+}
+
 if( ! function_exists('getTitle')) {
     /**
      * Render nodes for nested sets

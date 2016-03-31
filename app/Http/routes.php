@@ -1,14 +1,22 @@
 <?php
 
 // Application routes
+use App\Providers\GeneralServiceProvider;
+
 Route::group(['namespace' => 'Application', 'middleware' => 'app'], function()
 {
     Route::get('/', ['as' => 'root', 'uses' => 'HomeController@index']);
+
+
+
+    Route::get('gamelaunch', ['as' => 'gamelaunch', 'uses' => 'HomeController@gamelaunch']);
+    Route::get('topgames', ['as' => 'games', 'uses' => 'HomeController@topgames']);
     Route::get('article/{article}',  ['as' => 'article', 'uses' => 'ArticleController@index']);
     Route::get('page/{page}',  ['as' => 'page', 'uses' => 'PageController@index']);
     Route::get('category/{category}',  ['as' => 'category', 'uses' => 'CategoryController@index']);
     Route::post('language/change', ['as' => 'app.language.change' , 'uses' => 'LanguageController@postChange']);
     Route::get('promotions', 'PageController@promotions');
+    Route::get('login', ['as' => 'login', 'uses' => 'PageController@login']);
 });
 
 // Auth routes
@@ -63,4 +71,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('carousel', 'CarouselController');
     Route::resource('partner', 'PartnerController');
     Route::resource('promotion', 'PromotionController');
+});
+
+// AJAX route requests and responses
+Route::get('games', function() {
+    if(Request::ajax()) {
+        $data = (Array)json_decode(json_encode(new SimpleXMLElement(Config::get('components.xml'))));
+        return $data;
+    }
 });

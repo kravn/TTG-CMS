@@ -18,8 +18,7 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        
     <![endif]-->
     <script src="{{ url( elixir('js/application.js') ) }}" type="text/javascript"></script>
     <script src="{{ url( 'js/application-custom.js' ) }}" type="text/javascript"></script>
@@ -36,21 +35,19 @@
         </div>
     @endif
 
-    <div class="section--content">
-        <div class="container">
-            <main class="content">
-                @yield('content')
-            </main>
-        </div>
+    <div class="section section--content">
+        <main class="container">
+            @yield('content')
+        </main>
     </div>
 
-    <div class="section--partners">
+    <div class="section section--partners">
         @include('partials.application.partners')
     </div>
-    <div class="section--footer">
+    <div class="section section--footer">
         @include('partials.application.footer')
     </div>
-    <div class="section--copyright">
+    <div class="section section--copyright">
         <p> {{ Session::get('current_lang')->site_footnote }}</p>
     </div>
 
